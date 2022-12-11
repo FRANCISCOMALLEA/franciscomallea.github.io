@@ -1,1 +1,28 @@
+---
+layout: post
+title: Justicia, Explicabilidad y Transparencia En Sistemas de Recomendación
+---
+## Conversando con un Recomendador 
 
+Hoy en día es cada vez más común encontrarse con páginas o espacios digitales donde podemnos interacturar con otra persona o sistema. Al relacionarse 
+con estas nuevas soluciones es posible encontrar un abanico de posibilidades que van desde un Chatbot hasta los sistemas de recomendación conversacionales. Este último
+caso, es uno de los ejemplos más avanzados a donde se ha llegado en esta materia.
+
+Un sistema recomendador conversacional utiliza herramientas de NLP y programación para dar la posibilidad de desarrollar una conversación en un lenguaje y forma
+similar a la de un humano. No se trata de un mecanismo que entrega opciones que el usuario va eligiendo para llega a una respuesta (clásicamente "si desea opcion 1
+precione 1, si desea opción 2 presiones 2...). Lo cierto es que desde el año 2000, soluciones de este tipo han ido creciendo, en particular desde el boom de los RECSYS
+conversacionales el año 2017.
+
+Por supuesto, diferentes investigadores han entregado diferentes metodologías para enfrentar este desafío, sin embargo, por lo general la arquitectura 
+de la solución es similar. Se basa en 5 grandes módulos. Primero un módulo de NLU (Natural Language Understanding) que permite entender el dialogo 
+con el usuario. Posteriormente, un módulo de DSM (Dialogue State Management) controla la conversación, identifica quien es el que habla y las acciones que se deben
+tomar. En seguida, uun sistema recomendador, define las mejores alternativas para el dialogo. Este sistema esta vinculado a una base de conocimiento (por lo general 
+externa) con la que se generan mecanismos de evolución continua de aprendizaje. Opcionalmente se incorpora un modulo de explicación (dependiendo la dificultad 
+del problema abarcado). Finalmente un módulo de NLG (Natural Language Generation) entrega la respuesta y permite generar el diálogo.
+
+Uno de los desafíos más importantes es entender lo que el usuario (humano) requiere dado un contexto particular. Así los objetivos principales tienen relación 
+con la detección de categorías de elementos, atributos específicos asociados cada uno de ellos, detectar los interéses del usuario, y analizar los sentimientos 
+a partir del texto incorporado entre otros.
+
+Por supuesto, como se mencionó, en la actualidad existen varias soluciones desarrolladas y disponibles para su uso y/o investigación. Entre ellos, RULAI es un 
+ejemplo de framework utilizado que permite desarrollar una comunicación de calidad.
