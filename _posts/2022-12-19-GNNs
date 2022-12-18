@@ -1,0 +1,38 @@
+---
+layout: post
+title: GNNs
+---
+## Grafos y Recomendadores
+
+Los sistemas de recomendación no son algo nuevo. Hace más de 3 decadas investigadores dieron pie a estudiar el problema de la recomendación y desarrollar algoritmos
+que permitan orientar en la toma de decisiones. Estas metodologías se iniciaron con el filtrado colaborativo, donde las principales problemáticas tienen relación
+con el cold-start (pocas iteraciones entre un usuario nuevo y el sistema) y los nuevos itemes. Para poder abordarlo se desarrollaron métodos de filtrado basado
+en contenido. Con el creciente interés de la academia en esta temática, comenzaron a desarrollarse nuevas alternativas. Entre ellas, métodos latentes (donde usuarios e ítemes son 
+presentados por vectores) permitieron usar el perfilamiento para poder recoger gustos y hacer recomendaciones. Sin embargo, con la aparición del concepto 
+de las redes neuronales, y en particular, el uso de técnicas de aprendizaje reforzado, la problemática de sistemas de recomendadores ha avanzado de manera exponencial.
+
+A pesar de todo, aún existen importantes desafíos en el problema de la recomendación. Uno de estos tiene que ver con el problema de la "burbuja". Los sistemas de
+recomendación, dada su naturaleza, implican una recomendación que deja fuera contenido, por lo tanto, la existencia de un sesgo aparece como un tema a enfrentar (en otras
+palabras, ¿Cómo Netflix se asegura que un contenido de los que no fue considerado en una recomendación, en verdad NO era de interés para el usuario?). Por otro lado, conceptos
+de transparencia (permitir al usuario definir algunos de los hiperparámetros del sistema de recomendación), la justicia y el concepto FAT (Justo / Explicable / Transparente),
+las métricas de evaluación, el conductismo (se "aprende" a partir de un comportamiento, no se consideran pensamientos o sentimientos) y la privacidad, aún son temáticas 
+que pacientemente esperan a ser resueltas, y donde la academia ha concentrado sus esfuerzos para enfrentarlos.
+
+A pesar de existir grandes avances y desafíos, los sistemas recomendadores siguen sorprendiendo con nuevas aplicaciones y maneras de comprender la realidad. Las GNN (Graph 
+Neuronal Networks) han encontrado su espacio en esta temática. Los grafos, a diferencia de las redes, permiten entender una realidad a partir del uso de nodos y pares que 
+son conectados por enlaces. No se trata de algo nuevo. Si bien desde los inicios del 2000 con trabajos de Jeh (2002), Huang (2004) y Liben-Nowell (2003) junto a otros académicos
+comenzaron a utilizar el concepto de grafos para resolver la recomendación.
+
+Los grafos permiten utilizar aprendizaje transductivos e inductivos. En el primero, el modelo reconoce los datos de entrenamiento y de test para desarrollar su recomendación, sin embargo,
+si hay una modificación en el grafo (ejemplo, inclusión de un nuevo nodo) el modelo debe volver a entrenarse. En el segundo caso, el modelo sólo ve los datos de entrenamiento, por lo tanto,
+el modelo se utiliza para predecir etiquetas para datos no visualizados en el grafo.
+
+Existen diferentes clases de GNN. Todas ellas permiten representar interacciones y conexiones de elementos mediante grafos, facilitando la capacidad de aprender de relaciones
+complejas. Las Graph Convolutional Neural Networks utilizan pooling y convoluciones para considerar la información de los nodos vecinos. Las Gated Graph Neuronal Networks, introducen
+una GRU para aprender representaciones de nodos absorviendo iterativamente la influencia de otros nodos. Finalmente, las Attention Networks o GAT, utilizan mecanismos 
+de atención para aprender las distintas relevancias que tienen algunos usuarios o itemes sobre otros.
+
+Así, los grafos han permitido ayudar a resolver la problemática de la recomendación. Ya modelos como GraphSage (por ejemplo utilizados en Pinterest) han tangibilizado
+y solucionado el problema de recomendación, pero aún queda un camino importante para recorrar. Encontrar o incorporar nuevas herramientas siempre será un desafío, pero
+aún mayor poder abordar las problemáticas definidas anteriormente y poder recoger a la ética dentro de este tipos de sistemas.
+
